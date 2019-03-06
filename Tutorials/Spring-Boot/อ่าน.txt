@@ -1,0 +1,10 @@
+1.สร้าง Spring Boot ด้วย Spring Initializr
+ https://start.spring.io/
+
+2.นำโปรเจ็กต์เข้ามาใน eclipse และใช้ Maven plugin โหลด dependencies เข้ามา
+
+3.build โปรเจ็กต์ด้วย Maven (Command line) ด้วยคำสั่ง mvn clean package
+
+4.deploy ไปที่ Jboss Wildfly เอาโปรเจ์กต์ war ไฟล์ไปไว้ที่ deployments 
+    เช่น wildfly-10.1.0.Final\standalone\deployments\jboss-wildfly-demo-1.0.0-SNAPSHOT.war
+ จากนั้นสตาร์ท jboss แล้วรันทดสอบ

@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fnil\fcharset222 Thonburi;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20220\viewh18220\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \ul \ulc0 \'a4\'d3\'ca\'d1\'e8\'a7 run\
+\ulnone docker run -d <\'aa\'d7\'e8\'cd image> = \'c3\'d1\'b9 docker container \'b4\'e9\'c7\'c2 image (-d = \'c3\'d1\'b9 background)\
+docker run -d --rm <\'aa\'d7\'e8\'cd image> = \'c3\'d1\'b9 docker container \'b4\'e9\'c7\'c2 image \'e1\'c5\'d0\'c5\'ba\'b7\'d4\'e9\'a7\'e0\'c1\'d7\'e8\'cd stop\
+\
+\ul \'a4\'d3\'ca\'d1\'e8\'a7\'b7\'d1\'e8\'c7\'e4\'bb\ulnone \
+docker ps = \'b4\'d9 container \'b7\'d5\'e8 run \'cd\'c2\'d9\'e8\
+docker ps -aq = \'b4\'d9 ID container \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+docker ps -a = \'b4\'d9 container (\'b7\'d1\'e9\'a7\'b7\'d5\'e8 run \'e1\'c5\'d0 stop \'cd\'c2\'d9\'e8)\
+docker images = \'b4\'d9 image \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+docker images abc* =  \'b4\'d9 image \'b7\'d5\'e8\'a2\'d6\'e9\'b9\'b5\'e9\'b9\'b4\'e9\'c7\'c2\'aa\'d7\'e8\'cd\'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+docker start $(docker ps -a -q -f status=exited) = \'c3\'d1\'b9\'e0\'a9\'be\'d2\'d0 container \'b7\'d5\'e8 stop \'cd\'c2\'d9\'e8\'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+docker restart $(docker ps -a -q) = \'c3\'d5\'ca\'b5\'d2\'c3\'ec\'b7 container \'e3\'cb\'c1\'e8\'b7\'d1\'e9\'a7\'cb\'c1\'b4 \
+docker stop <\'aa\'d7\'e8\'cd container ID> = \'cb\'c2\'d8\'b4\'c3\'d1\'b9 container \'b7\'d5\'e8\'c3\'d0\'ba\'d8 (\'c3\'d0\'ba\'d8\'b4\'e9\'c7\'c2\'aa\'d7\'e8\'cd\'e4\'b4\'e9)\
+docker stop $(docker ps -aq) = \'cb\'c2\'d8\'b4\'c3\'d1\'b9 container \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+\
+\
+\ul \'a4\'d3\'ca\'d1\'e8\'a7\'b4\'d9 Resources\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 docker stats <\'aa\'d7\'e8\'cd \'cb\'c3\'d7\'cd ID container> = \'b4\'d9 resource \'a2\'cd\'a7 container \'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+docker stats <\'aa\'d7\'e8\'cd \'cb\'c3\'d7\'cd ID container1, container2, ..> = \'b4\'d9 resource \'a2\'cd\'a7 container \'b7\'d5\'e8\'c5\'d0\'cb\'c5\'d2\'c2 container\
+Docker stats -a = \'b4\'d9 resource \'a2\'cd\'a7 container \'b7\'d1\'e9\'a7\'cb\'c1\'b4 (\'b7\'d1\'e9\'a7\'b7\'d5\'e8 run \'cd\'c2\'d9\'e8\'e1\'c5\'d0\'e4\'c1\'e8\'b6\'d9\'a1 run)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \ul \ulc2 \CocoaLigature0 \'a4\'d3\'ca\'d1\'e8\'a7\'c5\'ba\
+\ulnone docker rm $(docker ps -a -q) = \'c5\'ba container \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+docker rmi $(docker images -q) = \'c5\'ba image \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+\cf0 \CocoaLigature1 docker rm  <\'aa\'d7\'e8\'cd container ID> = \'c5\'ba container \'b7\'d5\'e8\'c3\'d0\'ba\'d8 (\'c3\'d0\'ba\'d8\'b4\'e9\'c7\'c2\'aa\'d7\'e8\'cd\'e4\'b4\'e9)\cf2 \CocoaLigature0 \
+docker rmi -f <\'aa\'d7\'e8\'cd image> = \'c5\'ba image \'b4\'e9\'c7\'c2 ID \'b7\'d5\'e8\'c3\'d0\'ba\'d8 (-f=force)\
+\cf0 \CocoaLigature1 docker system prune -a = \'c5\'ba container \'e1\'c5\'d0 image \'b7\'d5\'e8\'e4\'c1\'e8\'e4\'b4\'e9\'c3\'d1\'b9\'cd\'c2\'d9\'e8\'e1\'c5\'d0\'a4\'d7\'b9\'be\'d7\'e9\'b9\'b7\'d5\'e8\'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+\cf2 \CocoaLigature0 \
+\
+\ul \'a4\'d3\'ca\'d1\'e8\'a7 network\
+\ulnone docker network ls = \'b4\'d9\'c3\'d2\'c2\'a1\'d2\'c3\'e0\'a4\'c3\'d7\'cd\'a2\'e8\'d2\'c2\cf0 \CocoaLigature1 \
+docker network rm <network name> = \'c5\'ba\'e0\'a4\'c3\'d7\'cd\'a2\'e8\'d2\'c2\'b4\'e9\'c7\'c2\'aa\'d7\'e8\'cd\'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+docker network prune = \'c5\'ba\'e0\'a4\'c3\'d7\'cd\'a2\'e8\'d2\'c2\'b7\'d5\'e8\'e4\'c1\'e8\'e4\'b4\'e9\'e3\'aa\'e9\'b7\'d1\'e9\'a7\'cb\'c1\'b4\cf2 \CocoaLigature0 \
+docker network create <network_name> = \'ca\'c3\'e9\'d2\'a7\'e0\'a4\'c3\'d7\'e8\'cd\'a7\'a2\'e8\'d2\'c2\
+docker network connect <network_name> = \'e0\'aa\'d7\'e8\'cd\'c1\'b5\'e8\'cd\'e0\'a4\'c3\'d7\'cd\'a2\'e8\'d2\'c2\'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+docker network inspect <network_name> = \'b4\'d9\'c3\'d2\'c2\'c5\'d0\'e0\'cd\'d5\'c2\'b4\'a2\'cd\'a7\'e0\'a4\'c3\'d7\'cd\'a2\'e8\'d2\'c2\'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+\
+\ul \'b4\'d9 ip \'b7\'d1\'e9\'a7\'cb\'c1\'b4\'a2\'cd\'a7 container\
+\cf0 \ulnone \CocoaLigature1 docker inspect -f '\{\{.Name\}\} - \{\{range .NetworkSettings.Networks\}\}\{\{.IPAddress\}\}\{\{end\}\}' <\'aa\'d7\'e8\'cd \'cb\'c3\'d7\'cd containerID> = \'a0\'b4\'d9 ip \'a2\'cd\'a7 container \'b7\'d5\'e8\'c3\'d0\'ba\'d8\
+docker inspect -f '\{\{.Name\}\} - \{\{range .NetworkSettings.Networks\}\}\{\{.IPAddress\}\}\{\{end\}\}' $(docker ps -aq) = \'b4\'d9 ip \'a2\'cd\'a7 container \'b7\'d1\'e9\'a7\'cb\'c1\'b4\
+\cf2 \CocoaLigature0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\cf0 \CocoaLigature1 docker pull nginx:latest = \'b4\'d6\'a7 image \'c5\'a7\'c1\'d2\
+docker run -d nginx = \'c3\'d1\'b9 image (-d \'a4\'d7\'cd\'bc\'c5\'a1\'d2\'c3 run \'a8\'d0\'e4\'c1\'e8\'cd\'c2\'d9\'e8\'e3\'b9 console \'e1\'c5\'d0\'e4\'c1\'e8\'e3\'cb\'e9\'ba\'c5\'ea\'cd\'a4)\
+docker run -d --rm nginx = \'c3\'d1\'b9 image \'e1\'c5\'d0\'c5\'ba\'b7\'d4\'e9\'a7\'e0\'c1\'d7\'e8\'cd stop\
+docker run -d \'97rm -p 7777:80 -v /usr/local/var/www:/usr/share/nginx/html nginx\
+\'a4\'d7\'a1\'a1\'d2\'c3\'b7\'d3\'be\'cd\'c3\'ec\'b5 mapping \'e0\'a2\'e9\'d2\'a1\'d1\'ba nginx \'e0\'be\'d7\'e8\'cd\'e3\'cb\'e9 access \'a8\'d2\'a1\'e0\'c7\'e7\'ba\'ba\'c3\'d2\'e0\'ab\'cd\'c3\'ec\'e0\'a2\'e9\'d2\'e4\'bb\'b7\'d5\'e8 nginx \'e4\'b4\'e9\
+\cf2 \CocoaLigature0 \
+\
+== \'b5\'d4\'b4\'b5\'d1\'e9\'a7 centos \'ba\'b9 docker ==\
+1. docker run -it centos  |  installation Centos on the docker\
+2. yum update   | Update repository of the Centos\
+3. yum install httpd -y | Installation httpd on Centos\
+4. Httpd -DFOREGROUND | Running the httpd web server on Centos\
+}

@@ -1,0 +1,7 @@
+import java.util.function.Function;
+
+Function<String, String> validateFlag = (flag) -> {
+	String dbData = "Success";
+	return flag.equals("Pope")? dbData : "Failure";
+};
+System.out.println( validateFlag.apply("Pope") ); //Success

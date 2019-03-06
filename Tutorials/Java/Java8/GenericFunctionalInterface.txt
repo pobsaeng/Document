@@ -1,0 +1,16 @@
+interface GenericProcess<T, U, V> {
+	public T Process(U number1, V number2);
+}
+
+public class GenericFunctionalInterface {
+	public static void main(String[] args) {
+
+		GenericProcess<Double, Double, Double> cal = (n1, n2) -> {
+			Double v = n1.doubleValue() + n2.doubleValue() * 10;
+			return v;
+		};
+		Double rs1 = cal.Process(10.50, 30.50);
+		System.out.println(rs1); // rs1 = 315.5
+
+	}
+}
